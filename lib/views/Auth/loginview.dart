@@ -5,8 +5,30 @@ class LoginView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Text("login view"),
+    return Scaffold(
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          const Text(
+            "Login Account",
+            style: TextStyle(
+              letterSpacing: 4,
+              fontSize: 22,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          TextFormField(
+            decoration: const InputDecoration(
+              labelText: "Email Address",
+            ),
+          ),
+          TextFormField(
+            decoration: const InputDecoration(
+              labelText: "Password",
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
